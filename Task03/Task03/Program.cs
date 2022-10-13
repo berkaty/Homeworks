@@ -11,9 +11,9 @@ namespace Task03
         static void Main(string[] args)
         {
             Console.WriteLine("Введите час");
-            double hour = double.Parse(Console.ReadLine());
+            int hour = int.Parse(Console.ReadLine());
             Console.WriteLine("Введите минуту");
-            double minute = double.Parse(Console.ReadLine());
+            int minute = int.Parse(Console.ReadLine());
 
             if (hour == minute)
             {
