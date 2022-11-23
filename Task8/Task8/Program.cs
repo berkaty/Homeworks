@@ -22,16 +22,15 @@ namespace Task8
         {
             if (x > 2)
                 return (2);
-            else if (0 < x)
+            else if ((0 < x) && (x<=2))
             {
-                if (x <= 2)
+        
                     return 0;
-                else
-                    return (-3 * x);
             }
             else
-                return x;
- 
+                return (-3 * x);
+
+
         }
         
     }
