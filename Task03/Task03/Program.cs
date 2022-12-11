@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,19 +15,19 @@ namespace Task03
             Console.WriteLine("Введите минуту");
             int minute = int.Parse(Console.ReadLine());
 
-            if (hour == minute)
+            //Скорость часовой стрелки = 360 / (12 * 60) = 0.5
+            //Скорость минутной стрелки = 360 / 60 = 6 
+            //Отсюда формула: 0.5 (60*hour + minute) = 6*minute  -> minute= 30 * hour / 5.5
+            if (((30 * hour / 5.5) - minute) < 0)
             {
-                Console.WriteLine(minute);
+                double Result = Math.Ceiling(30 * (hour + 1) / 5.5) - minute + 60;
+                Console.WriteLine($"Стрелки встретятся через {(Result)} минут");
             }
-            else if ( hour > minute)
+            else
             {
-                Console.WriteLine(hour - minute);
+                double Result = Math.Ceiling(30 * hour / 5.5) - minute;
+                Console.WriteLine($"Стрелки встретятся через {(Result)} минут") ;
             }
-            else if (hour < minute)
-            {
-                Console.WriteLine(60 - minute + hour + 1);
-            }
-
             Console.ReadKey();
         }
     }
