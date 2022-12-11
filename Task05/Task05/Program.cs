@@ -1,22 +1,27 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task05
+namespace Task09
 {
     internal class Program
     {
-        public static void Main()
+        static void Main(string[] args)
         {
-            Console.WriteLine(Math.Round( Square(2 + Square(3 + Square(4 + Square(5)))),3));
+            int x = 5;
+            Console.WriteLine(Result(x));
         }
-
-        public static double Square(double x)
+        public static double Result(int x)
         {
-            return Math.Sqrt(x);
+            double y=x;
+            while (x>2)
+            {
+                y= (x-1)+Math.Sqrt(y);
+                x = x - 1;
+            }
+            return (y);
         }
     }
 }
