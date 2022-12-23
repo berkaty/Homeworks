@@ -30,7 +30,6 @@ namespace Task93
             {
                 if ((Number1 % 10) == MaxNumber)
                     OrderNumber = NumberOfDigits;
-
                 NumberOfDigits -= 1;
                 Number1 /= 10;
             }
